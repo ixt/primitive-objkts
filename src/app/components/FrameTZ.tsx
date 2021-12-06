@@ -35,7 +35,7 @@ const FrameTZ = ({
   return (
     <FrameGenericNFT
       user={user}
-      image={(!tryingAlt ? nft.artifactUri : nft.thumbnailUri).replace(
+      image={(!tryingAlt ? nft.artifactUri : nft.displayUri).replace(
         'ipfs://',
         ipfsNode+'/ipfs/'
       )}

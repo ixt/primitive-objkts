@@ -18,7 +18,7 @@ const FrameGenericNFT = ({
   const { fill, metadata } = useConfig();
   return (
     <div className="nft">
-      <img src={image} onError={advanceToNext} />
+        <video autoPlay loop className="media" src={image} poster={image}/>
       {metadata == 'show' && (
         <div className="meta">
           <div className="name">{name}</div>
@@ -54,8 +54,7 @@ const FrameGenericNFT = ({
           align-items: center;
           justify-content: center;
         }
-        img {
-          display: block;
+        .media {
           width: 100%;
           height: 100%;
           object-fit: ${fill};

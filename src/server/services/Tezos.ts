@@ -22,6 +22,12 @@ const conseilServer = process.env.CONSEIL_SERVER as string;
 const conseilApiKey = process.env.CONSEIL_KEY as string;
 const ipfsNode = process.env.NEXT_PUBLIC_IPFS_NODE as string || 'https://cloudflare-ipfs.com/ipfs/';
 
+// const contracts = [];
+// const fxhash = {
+//   nftLedger: 22785,
+//   nftMetadataMap: 22789,
+//   protocol: 'KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE'
+// };
 
 const mainnet = {
   nftLedger: 511,
