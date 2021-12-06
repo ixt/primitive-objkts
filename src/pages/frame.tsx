@@ -6,6 +6,7 @@ import FrameTZ from '@app/components/FrameTZ';
 
 const Frame = () => {
   const { addresses } = useConfig();
+  const { ipfsNode } = useConfig();
   const [index, setIndex] = useState(0);
   const [turn, setTurn] = useState(0);
   const nextUser = () => {
@@ -52,7 +53,7 @@ const Frame = () => {
         <FrameETH user={activeUser} turn={turn} onComplete={nextUser} />
       )}
       {activeUser?.address.startsWith('tz') && (
-        <FrameTZ user={activeUser} turn={turn} onComplete={nextUser} />
+        <FrameTZ user={activeUser} turn={turn} onComplete={nextUser} ipfsNode={ipfsNode} />
       )}
       <style jsx>{`
         .frame {

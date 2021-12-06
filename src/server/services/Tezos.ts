@@ -16,9 +16,12 @@ logger.setLevel('debug', false);
 registerLogger(logger);
 registerFetch(fetch);
 
+
 // signup at nautilus.cloud
 const conseilServer = process.env.CONSEIL_SERVER as string;
 const conseilApiKey = process.env.CONSEIL_KEY as string;
+const ipfsNode = process.env.NEXT_PUBLIC_IPFS_NODE as string || 'https://cloudflare-ipfs.com/ipfs/';
+
 
 const mainnet = {
   nftLedger: 511,
@@ -211,7 +214,7 @@ export const getCollectionForAddress = async (address: string) => {
       return {
         ...objkt,
         ...(await fetch(
-          `https://cloudflare-ipfs.com/ipfs/${objkt.ipfsHash}`
+          `${ipfsNode}/ipfs/${objkt.ipfsHash}`
         ).then(res => res.json()))
       };
     })
@@ -365,7 +368,7 @@ export const getCreationsForAddress = async (address: string) => {
       return {
         ...objkt,
         ...(await fetch(
-          `https://cloudflare-ipfs.com/ipfs/${objkt.ipfsHash}`
+          `${ipfsNode}/ipfs/${objkt.ipfsHash}`
         ).then(res => res.json()))
       };
     })

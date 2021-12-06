@@ -3,6 +3,9 @@ import AddressTextInputs, {
 } from '@app/components/AddressTextInputs';
 import React, { useState } from 'react';
 
+
+const { NEXT_PUBLIC_IPFS_NODE } = process.env;
+
 const IndexPage = () => {
   const [addresses, setAddresses] = useState<AddressInputType[]>([
     {
@@ -27,7 +30,8 @@ const IndexPage = () => {
   const [mode, setMode] = useState<'ordered' | 'random'>('ordered');
   const [metadata, setMetadata] = useState<'show' | 'hide'>('show');
   const [fill, setFill] = useState<'contain' | 'cover'>('contain');
-  const config = { addresses, time, unit, mode, fill, metadata };
+  const [ipfsNode, setNode] = useState<string>(NEXT_PUBLIC_IPFS_NODE || '');
+  const config = { addresses, time, unit, mode, fill, metadata, ipfsNode };
   return (
     <div className="index">
       <div className="left">
@@ -138,7 +142,17 @@ const IndexPage = () => {
                 hr
               </div>
             </div>
-          </div>
+        </div>
+        <div className="customize-section">
+          <div className="customize-title">IPFS Gateway</div>
+          <div className="spacer" />
+          <input
+            type="string"
+            value={ipfsNode}
+            onChange={e => setNode(e.target.value)}
+            required
+          />
+        </div>
         </div>
       </div>
       <div className="right">

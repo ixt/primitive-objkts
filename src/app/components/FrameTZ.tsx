@@ -7,10 +7,12 @@ import FrameGenericNFT from './FrameGenericNFT';
 const FrameTZ = ({
   user,
   turn,
+  ipfsNode,
   onComplete
 }: {
   user: AddressInputType;
   turn: number;
+  ipfsNode: string;
   onComplete: () => void;
 }) => {
   const collection = useTezos(user);
@@ -35,7 +37,7 @@ const FrameTZ = ({
       user={user}
       image={(!tryingAlt ? nft.artifactUri : nft.thumbnailUri).replace(
         'ipfs://',
-        'https://cloudflare-ipfs.com/ipfs/'
+        ipfsNode+'/ipfs/'
       )}
       name={nft.name}
       description={nft.description}

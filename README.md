@@ -14,4 +14,6 @@ CONSEIL_SERVER=
 CONSEIL_KEY=
 ```
 
+You can also optionally add a IPFS_NODE variable pointing to different IPFS gateway rather than cloudflare
+
 You can get your server URL and api key from https://nautilus.cloud
