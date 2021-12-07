@@ -1,4 +1,4 @@
-import { validateETH, validateTZ } from '@app/features/validators';
+import { validateTZ } from '@app/features/validators';
 import React, { FormEventHandler, useEffect, useState } from 'react';
 import AddressPreview from './AddressPreview';
 
@@ -31,7 +31,7 @@ const AddressTextInputs = ({
   };
   const [isValid, setIsValid] = useState(false);
   useEffect(() => {
-    if (text.length) setIsValid(validateETH(text) || validateTZ(text));
+    if (text.length) setIsValid(validateTZ(text));
   }, [text]);
   return (
     <>

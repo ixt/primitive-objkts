@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import useConfig from '@app/features/useConfig';
-import FrameETH from '@app/components/FrameETH';
 import FrameTZ from '@app/components/FrameTZ';
 
 const Frame = () => {
@@ -35,23 +34,20 @@ const Frame = () => {
         />
         <meta
           name="twitter:description"
-          content="Get a live updating view of your NFT collection onto your digital
+          content="Get a live updating view of your CyberKidz collection onto your digital
           frame, or combine your friends and favorites into one big group frame
           to share.."
         />
         <meta
           name="twitter:image"
-          content="https://primitive-objkts.gimmix.org/static/empty.jpg"
+          content="https://cyberkidz.reveb.la/static/empty.jpg"
         />
         <link
           rel="icon"
-          href="https://primitive-objkts.gimmix.org/static/empty.jpg"
+          href="https://cyberkidz.reveb.la/static/empty.jpg"
         />
       </Head>
       {addresses.length == 0 && <div className="empty"></div>}
-      {activeUser?.address.startsWith('0x') && (
-        <FrameETH user={activeUser} turn={turn} onComplete={nextUser} />
-      )}
       {activeUser?.address.startsWith('tz') && (
         <FrameTZ user={activeUser} turn={turn} onComplete={nextUser} ipfsNode={ipfsNode} />
       )}

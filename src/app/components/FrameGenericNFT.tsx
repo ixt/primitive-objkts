@@ -22,7 +22,6 @@ const FrameGenericNFT = ({
       {metadata == 'show' && (
         <div className="meta">
           <div className="name">{name}</div>
-          <div className="description">{description}</div>
           <div className="user">
             {user.type == 'collection' ? (
               <>

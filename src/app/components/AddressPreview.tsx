@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AddressInputType } from './AddressTextInputs';
 import { FaMinus, FaUserAlt } from 'react-icons/fa';
-import { validateETH } from '@app/features/validators';
+import { validateTZ } from '@app/features/validators';
 const AddressPreview = ({
   number,
   user,
@@ -17,7 +17,7 @@ const AddressPreview = ({
 }) => {
   const [nameInput, setNameInput] = useState('');
   const [isSettingName, setIsSettingName] = useState(false);
-  const hex = validateETH(user.address)
+  const hex = validateTZ(user.address)
     ? user?.address?.slice(-6)
     : parseInt(user.address, 36)
         .toString(16)
@@ -40,22 +40,6 @@ const AddressPreview = ({
             {user.address.slice(0, 6)}...{user.address.slice(-4)}
           </div>
           <div className="spacer" />
-          <div className="type">
-            {validateETH(user.address) ? (
-              'ETH COLLECTION'
-            ) : (
-              <>
-                TZ{' '}
-                <select
-                  value={user.type}
-                  onChange={e => onChangeType(e.target.value)}
-                >
-                  <option value="collection">COLLECTION</option>
-                  <option value="creations">CREATIONS</option>
-                </select>
-              </>
-            )}
-          </div>
           <div className="remove">
             <button onClick={onRemoveClick}>
               <FaMinus />

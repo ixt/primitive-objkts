@@ -11,11 +11,11 @@ const api: NextApiHandler = async (req, res) => {
   if (type == 'creations') {
     const collection = await getCreationsForAddress(address);
     res.setHeader('Cache-Control', 'stale-while-revalidate=3600');
-    return res.json(collection.slice(0, 10));
+    return res.json(collection);
   } else {
     const collection = await getCollectionForAddress(address);
     res.setHeader('Cache-Control', 'stale-while-revalidate=3600');
-    return res.json(collection.slice(0, 10));
+    return res.json(collection.slice(0));
   }
 };
 

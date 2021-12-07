@@ -1,6 +1,6 @@
 import { AddressInputType } from '@app/components/AddressTextInputs';
 import { useRouter } from 'next/dist/client/router';
-import { validateETH, validateTZ } from './validators';
+import { validateTZ } from './validators';
 
 
 const { NEXT_PUBLIC_IPFS_NODE } = process.env;
@@ -30,7 +30,7 @@ const useConfig = (): Config => {
   const config: Config = JSON.parse(query.c as string);
   let { addresses, mode, time, unit, fill, metadata, ipfsNode } = config;
   addresses = addresses.filter(
-    a => validateETH(a.address) || validateTZ(a.address)
+    a => validateTZ(a.address)
   );
 
   return { addresses, mode, time, unit, fill, metadata, ipfsNode };

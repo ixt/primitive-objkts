@@ -6,7 +6,7 @@ const MainLayout: FunctionComponent = ({ children }) => {
   return (
     <div className="main-layout">
       <Head>
-        <title>PRIMITVE OBJKTS</title>
+        <title>CYBERKIDZSHOW</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -15,30 +15,33 @@ const MainLayout: FunctionComponent = ({ children }) => {
         <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:title"
-          content="PRIMITIVE OBJKTS: Hic et nunc and Ethereum art on your digital frame."
+          content="CYBERKIDZSHOW: Cyberkidz on your digital frame."
         />
         <meta
           name="twitter:description"
-          content="Get a live updating view of your NFT collection onto your digital
+          content="Get a live updating view of your cyberkidz onto your digital
           frame, or combine your friends and favorites into one big group frame
           to share.."
         />
         <meta
           name="twitter:image"
-          content="https://primitive-objkts.gimmix.org/static/empty.jpg"
+          content="https://cyberkidz.reveb.la/static/empty.jpg"
         />
         <link
           rel="icon"
-          href="https://primitive-objkts.gimmix.org/static/empty.jpg"
+          href="https://cyberkidz.reveb.la/static/empty.jpg"
         />
       </Head>
       <div className="info-bar">
         WORKS WITH{' '}
-        <a href="https://hicetnunc.xyz" target="_blank">
-          HIC ET NUNC
+        <a href="https://cyberkidzclub.xyz" target="_blank">
+            CYBERKIDZCLUB
         </a>{' '}
-        OBJKTs AND ETHEREUM NFTs. AUTO-ADJUSTS FOR ANY SCREEN, INCLUDING
-        ELECTRIC OBJECTS EO1 AND EO2!
+        AUTO-ADJUSTS FOR ANY SCREEN, INCLUDING
+        ELECTRIC OBJECTS EO1 AND EO2! BASED ON CODE BY{' '}
+        <a href="https://github.com/gimmixorg/primitive-objkts" target="_blank">
+            GIMMIXORG
+        </a>{' '}
         <div className="stripes">
           <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
             <defs>
@@ -71,14 +74,14 @@ const MainLayout: FunctionComponent = ({ children }) => {
       <header>
         <div>
           <Link href="/">
-            <a className="factory">PRIMITIVE OBJKTS</a>
+            <a className="factory">CYBERKIDZSHOW</a>
           </Link>
         </div>
         <div></div>
       </header>
       <main>{children}</main>
       <footer>
-        <div>GIMMIX © MMXXI</div>
+        <div>GIMMIX © MMXXI (and a few changes by Orange to make it work with cyberkidz)</div>
         <div>
           <a
             href="https://github.com/gimmix-org/primitive-objkts"
@@ -87,7 +90,7 @@ const MainLayout: FunctionComponent = ({ children }) => {
             Free and Open Source
           </a>
           <br />
-          Not affiliated with or endorsed by Electric Objects or Hic Et Nunc.
+          Not affiliated with or endorsed by Electric Objects or Cyberkidzclub.
         </div>
       </footer>
       <style jsx>{`

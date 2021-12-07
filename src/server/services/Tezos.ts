@@ -22,18 +22,22 @@ const conseilServer = process.env.CONSEIL_SERVER as string;
 const conseilApiKey = process.env.CONSEIL_KEY as string;
 const ipfsNode = process.env.NEXT_PUBLIC_IPFS_NODE as string || 'https://cloudflare-ipfs.com/ipfs/';
 
+const mainnet = {
+  nftLedger: 39478,
+  nftMetadataMap: 39480,
+  protocol: 'KT19VQfPZhmAw9FN3hs2da3CmezrdP2ubQCc'
+};
 // const contracts = [];
 // const fxhash = {
 //   nftLedger: 22785,
 //   nftMetadataMap: 22789,
 //   protocol: 'KT1KEa8z6vWXDJrVqtMrAeDVzsvxat3kHaCE'
 // };
-
-const mainnet = {
-  nftLedger: 511,
-  nftMetadataMap: 514,
-  protocol: 'KT1Hkg5qeNhfwpKW4fXvq7HGZB9z2EnmCCA9'
-};
+// const mainnet = {
+//   nftLedger: 511,
+//   nftMetadataMap: 514,
+//   protocol: 'KT1Hkg5qeNhfwpKW4fXvq7HGZB9z2EnmCCA9'
+// };
 
 export const getCollectionForAddress = async (address: string) => {
   let collectionQuery = ConseilQueryBuilder.blankQuery();

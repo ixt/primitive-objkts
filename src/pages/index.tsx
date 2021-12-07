@@ -9,21 +9,10 @@ const { NEXT_PUBLIC_IPFS_NODE } = process.env;
 const IndexPage = () => {
   const [addresses, setAddresses] = useState<AddressInputType[]>([
     {
-      address: 'tz1gqaKjfQBhUMCE6LhbkpuittRiWv5Z6w38',
-      type: 'creations',
-      name: 'jjjjjjjjjjohn'
-    },
-    {
-      address: 'tz1iGcF8HVtYJpCFAsLX6nwYgQgDR162VNBi',
-      type: 'creations',
-      name: 'kyt'
-    },
-    {
-      address: '0xcda72070e455bb31c7690a170224ce43623d0b6f',
+      address: 'tz1YtGNmXSxU8s4UvGDZWb6xYTJogoXu9xgs',
       type: 'collection',
-      name: 'Foundation'
+      name: 'revebla'
     },
-    { address: 'tz1cHVbttfksw95gn51fdxdra4Zbqe36LspP', type: 'creations' }
   ]);
   const [time, setTime] = useState<number>(10);
   const [unit, setUnit] = useState<'s' | 'm' | 'h'>('m');
@@ -35,9 +24,9 @@ const IndexPage = () => {
   return (
     <div className="index">
       <div className="left">
-        <div className="badge">PUT WEB3 ART ON YOUR EO1 or EO2</div>
+        <div className="badge">PUT THE CYBERKIDZ ON A CYBERPLACE</div>
         <div className="title">
-          Get a live updating view of your NFT collection onto your digital
+          Get a live updating view of your Cyberkidsclub collection onto your digital
           frame, or combine your friends and favorites into one big group frame
           to share.
         </div>
@@ -45,7 +34,7 @@ const IndexPage = () => {
           Open this page in a desktop browser to create your frame.
         </div>
         <div className="description">
-          Enter up to 10 wallet addresses (Ethereum or Tezos).
+          Enter up to 10 wallet addresses (Tezos).
         </div>
         <div className="addresses">
           <AddressTextInputs
@@ -113,7 +102,7 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="customize-section">
-            <div className="customize-title">Time per piece</div>
+            <div className="customize-title">Time per kid</div>
             <div className="spacer" />
             <input
               type="number"
@@ -168,11 +157,11 @@ const IndexPage = () => {
           <a
             className="url-preview"
             target="_blank"
-            href={`https://primitive-objkts.gimmix.org/frame?c=${encodeURIComponent(
+            href={`https://cyberkidz.reveb.la/frame?c=${encodeURIComponent(
               JSON.stringify(config)
             )}`}
           >
-            https://primitive-objkts.gimmix.org/frame?c=
+            https://cyberkidz.reveb.la/frame?c=
             {encodeURIComponent(JSON.stringify(config))}
           </a>
           <div className="url-info">
@@ -227,7 +216,7 @@ const IndexPage = () => {
         }
         .iframe-wrapper {
           height: 384px;
-          width: 216px;
+          width: 384px;
           overflow: hidden;
           outline: 10px solid #333;
           background-color: black;
@@ -241,7 +230,7 @@ const IndexPage = () => {
         iframe {
           outline: none;
           height: 1920px;
-          width: 1080px;
+          width: 1920px;
           transform: scale(0.2);
           transform-origin: top left;
         }
