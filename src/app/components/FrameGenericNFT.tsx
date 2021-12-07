@@ -18,7 +18,7 @@ const FrameGenericNFT = ({
   const { fill, metadata } = useConfig();
   return (
     <div className="nft">
-        <video autoPlay loop className="media" src={image} poster={image}/>
+        <img className="media" src={image} onError={advanceToNext}/>
       {metadata == 'show' && (
         <div className="meta">
           <div className="name">{name}</div>

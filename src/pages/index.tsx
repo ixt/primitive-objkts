@@ -14,8 +14,8 @@ const IndexPage = () => {
       name: 'revebla'
     },
   ]);
-  const [time, setTime] = useState<number>(10);
-  const [unit, setUnit] = useState<'s' | 'm' | 'h'>('m');
+  const [time, setTime] = useState<number>(5);
+  const [unit, setUnit] = useState<'s' | 'm' | 'h'>('s');
   const [mode, setMode] = useState<'ordered' | 'random'>('ordered');
   const [metadata, setMetadata] = useState<'show' | 'hide'>('show');
   const [fill, setFill] = useState<'contain' | 'cover'>('contain');
